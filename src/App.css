@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  
+  font-size: 24px;
 }
 
 body {
@@ -14,9 +14,12 @@ body {
 
 body,
 input,
+select,
 textarea,
 button {
-  font-family: "Inter", sans-serif;
+  font-family: "Zain", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .App {
@@ -32,29 +35,40 @@ button {
   flex-direction: column;
   justify-content: center;
   transform: scale(0.7);
+  animation: slideIn 1s ease-out;
 }
 
 .form > h1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-size: 44px;
+  animation: colorChange 6s ease-in infinite;
 }
 
-.form > input, select,
+.form > input,
+select,
 textarea {
   padding: 20px;
   border-radius: 3px;
-  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137); */
   margin-bottom: 20px;
   border: 1px solid lightgray;
-  /* border: none; */
   background: #fff;
-  font-size: 16px;
   color: rgb(0, 0, 32);
   outline: none;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.form > input:focus, select:focus
+.form > input:focus,
+select:focus,
 textarea:focus {
-  border: 1px solid rgb(0, 0, 196);
+  border: 2px double rgb(0, 0, 196);
+  box-shadow: 0 0 10px rgba(0, 0, 196, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.form > input:hover,
+select:hover,
+textarea:hover {
+  transform: scale(1.02);
 }
 
 .form > textarea {
@@ -64,24 +78,50 @@ textarea:focus {
 }
 
 .form > label {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: rgb(0, 0, 32);
   font-weight: bold;
 }
 
 .form > button {
   padding: 20px;
-  border: none;
+  border: 3px solid rgb(0, 0, 90);
   background-color: rgb(2, 2, 110);
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 26px;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin-top: 10px;
 }
 
 .form > button:hover {
   background-color: rgb(0, 0, 196);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 196, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  20% {
+    color: rgb(2, 2, 184);
+  }
+  80% {
+    color: rgb(248, 246, 253);
+  }
+  100% {
+    color: black;
+  }
 }
