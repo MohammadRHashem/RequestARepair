@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 
 const Contact = () => {
@@ -9,6 +9,16 @@ const Contact = () => {
     service: [],
     note: "",
   });
+
+  useEffect(() => {
+    // Set the zoom level to 100% on component mount
+    document.body.style.zoom = '85%';
+
+    // Cleanup: reset the zoom level when the component unmounts
+    return () => {
+      document.body.style.zoom = '';
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -97,7 +107,6 @@ const Contact = () => {
         onChange={handleChange}
         multiple
         title="choose a service"
-        
       >
         <option value="" disabled hidden>
           choose a service:

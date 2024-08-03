@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Zain:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zain:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -60,8 +60,8 @@ textarea {
 .form > input:focus,
 select:focus,
 textarea:focus {
-  border: 2px double #9CE4FF;
-  box-shadow: 0 0 10px #9CE4FF;
+  border: 2px double #9ce4ff;
+  box-shadow: 0 0 10px #9ce4ff;
   transition: all 0.3s ease-in-out;
 }
 
@@ -97,9 +97,9 @@ textarea:hover {
 }
 
 .form > button:hover {
-  background-color: #8EE49C;
+  background-color: #8ee49c;
   transform: scale(1.05);
-  box-shadow: 0 0 10px #8EE49C;
+  box-shadow: 0 0 10px #8ee49c;
 }
 
 @keyframes slideIn {
@@ -118,5 +118,4 @@ textarea:hover {
   50% {
     color: #38caff;
   }
-  
 }
