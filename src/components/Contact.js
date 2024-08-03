@@ -67,7 +67,7 @@ const Contact = () => {
         value={formData.location}
         onChange={handleChange}
       >
-        <option value="" disabled>
+        <option value="" disabled hidden>
           choose
         </option>
         <option value="Tyre">Tyre</option>
@@ -81,7 +81,7 @@ const Contact = () => {
         value={formData.deviceType}
         onChange={handleChange}
       >
-        <option value="" disabled>
+        <option value="" disabled hidden>
           choose your device type
         </option>
         <option value="Laptop">Laptop</option>
@@ -91,13 +91,15 @@ const Contact = () => {
       <label>Service(s) | نوع الخدمة</label>
       <select
         required
+        placeholder="choose a service"
         name="service"
         value={formData.service}
         onChange={handleChange}
         multiple
+        title="choose a service"
         
       >
-        <option value="" disabled>
+        <option value="" disabled hidden>
           choose a service:
         </option>
         <option value="format/install windows">Format/Install Windows</option>

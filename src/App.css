@@ -41,7 +41,7 @@ button {
 .form > h1 {
   margin-bottom: 20px;
   font-size: 44px;
-  animation: colorChange 6s ease-in infinite;
+  animation: colorChange 3s ease-in-out infinite;
 }
 
 .form > input,
@@ -60,8 +60,8 @@ textarea {
 .form > input:focus,
 select:focus,
 textarea:focus {
-  border: 2px double rgb(0, 0, 196);
-  box-shadow: 0 0 10px rgba(0, 0, 196, 0.5);
+  border: 2px double #9CE4FF;
+  box-shadow: 0 0 10px #9CE4FF;
   transition: all 0.3s ease-in-out;
 }
 
@@ -85,8 +85,8 @@ textarea:hover {
 
 .form > button {
   padding: 20px;
-  border: 3px solid rgb(0, 0, 90);
-  background-color: rgb(2, 2, 110);
+  border: none;
+  background-color: #38caff;
   font-weight: bold;
   font-size: 26px;
   border-radius: 3px;
@@ -97,9 +97,9 @@ textarea:hover {
 }
 
 .form > button:hover {
-  background-color: rgb(0, 0, 196);
+  background-color: #8EE49C;
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 196, 0.5);
+  box-shadow: 0 0 10px #8EE49C;
 }
 
 @keyframes slideIn {
@@ -115,13 +115,8 @@ textarea:hover {
   0% {
     color: black;
   }
-  20% {
-    color: rgb(2, 2, 184);
+  50% {
+    color: #38caff;
   }
-  80% {
-    color: rgb(248, 246, 253);
-  }
-  100% {
-    color: black;
-  }
+  
 }
