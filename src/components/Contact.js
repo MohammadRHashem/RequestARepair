@@ -80,7 +80,7 @@ const Contact = () => {
         <option value="" disabled hidden>
           choose
         </option>
-        <option value="Tyre">Tyre</option>
+        <option value="Beirut">Beirut</option>
         <option value="Other">Other</option>
       </select>
 
@@ -116,6 +116,7 @@ const Contact = () => {
         <option value="Reset Windows Password">Reset Windows password</option>
         <option value="Fix a Problem">Fix a problem</option>
         <option value="Activate Windows">Activate Windows</option>
+        <option value="Install a cracked app">Install a cracked app</option>
         <option value="Other">Other (mention it below..)</option>
       </select>
 
