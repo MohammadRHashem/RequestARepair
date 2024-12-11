@@ -12,11 +12,11 @@ const Contact = () => {
 
   useEffect(() => {
     // Set the zoom level to 100% on component mount
-    document.body.style.zoom = '85%';
+    document.body.style.zoom = "85%";
 
     // Cleanup: reset the zoom level when the component unmounts
     return () => {
-      document.body.style.zoom = '';
+      document.body.style.zoom = "";
     };
   }, []); // Empty dependency array ensures this runs only once on mount
 
@@ -80,6 +80,7 @@ const Contact = () => {
         <option value="" disabled hidden>
           choose
         </option>
+        <option value="Tyre">Tyre</option>
         <option value="Beirut">Beirut</option>
         <option value="Other">Other</option>
       </select>
@@ -111,12 +112,14 @@ const Contact = () => {
         <option value="" disabled hidden>
           choose a service:
         </option>
-        <option value="format/install windows">Format/Install Windows</option>
+        <option value="Format/ReInstall windows">
+          Format/ReInstall Windows
+        </option>
         <option value="Install/Buy App(s)">Install/Buy App(s)</option>
+        <option value="Install a cracked app">Install a cracked app</option>
+        <option value="Activate Windows">Activate Windows</option>
         <option value="Reset Windows Password">Reset Windows password</option>
         <option value="Fix a Problem">Fix a problem</option>
-        <option value="Activate Windows">Activate Windows</option>
-        <option value="Install a cracked app">Install a cracked app</option>
         <option value="Other">Other (mention it below..)</option>
       </select>
 
